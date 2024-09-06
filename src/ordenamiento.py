@@ -1,6 +1,13 @@
 def evaluar(numero1, numero2, numero3, numero4):
-    # TODO: Coloca aquí el código del ejercicio 5: Ordenamiento
-    return "";
+   numeros = [numero1, numero2, numero3, numero4]
+   for i in range(len(numeros) - 1):
+    for j in range(len(numeros) -i - 1):
+       if numeros[j] > numeros[j + 1]:
+        temp = numeros[j]
+        numeros[j] = numeros[j + 1]
+        numeros[j + 1] = temp
+    respuesta = ",".join(map(str, numeros))   
+    return respuesta 
 
 if __name__ == '__main__':
     print("Número 1:", end="")
